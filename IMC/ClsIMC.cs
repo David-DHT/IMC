@@ -13,6 +13,7 @@ namespace IMC
         private float peso;
         private float zancada;
         private float pasos;
+
         private float IMC;
         private float DistanciaR;
 
@@ -84,7 +85,7 @@ namespace IMC
                 if (DistanciaR < Faltante){
                     float total;
                     total = Faltante - DistanciaR;
-                    return "La distancia que falta por recorrer es de " + total;
+                    return "La distancia que falta por recorrer es de " + total+" Km";
                 }
                 else
                 {
