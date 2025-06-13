@@ -23,8 +23,6 @@ namespace IMC
         {
             try
             {
-
-
                 Calculo.C_Estatura = float.Parse(txtEstatura.Text);
                 Calculo.C_peso = float.Parse(txtPeso.Text);
                 Calculo.C_zancada = float.Parse(txtZancadas.Text);
@@ -33,8 +31,7 @@ namespace IMC
                 lblIMC.Text = "Tu IMC es de " + Calculo.CalcularIMC();
                 MessageBox.Show("Tu IMC es de " + Calculo.CalcularIMC());
                 var Estado = Calculo.Estado();
-                MessageBox.Show(Estado.Item1);
-                MessageBox.Show("La distancia recorrida fue de " + Calculo.CalcularDistancia() + "Km\n" + Calculo.C_Faltante(Estado.Item2)); 
+                MessageBox.Show(Estado.Item1+ "\nLa distancia recorrida fue de "+Calculo.CalcularDistancia() + "Km\n" + Calculo.C_Faltante(Estado.Item2));
             }
             catch
             {
@@ -53,7 +50,7 @@ namespace IMC
 
         private void txtEstatura_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)// Si es digito 
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.')// Si es digito 
             {
                 if (e.KeyChar != (char)Keys.Back)
                     e.Handled = true;
@@ -78,5 +75,10 @@ namespace IMC
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+        
     }
 }
