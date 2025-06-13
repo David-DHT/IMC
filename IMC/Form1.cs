@@ -31,8 +31,43 @@ namespace IMC
             var Estado = Calculo.Estado();
             MessageBox.Show(Estado.Item1);
             MessageBox.Show("La distancia recorrida fue de " + Calculo.CalcularDistancia()+"Km\n"+Calculo.C_Faltante(Estado.Item2));
-            
-         
         }
+
+        private void txtPeso_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)// Si es digito 
+            {
+                if (e.KeyChar != (char)Keys.Back)
+                    e.Handled = true;
+            }
+        }
+
+        private void txtEstatura_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar) && e.KeyChar != '.' && e.KeyChar != (char)Keys.Back)// Si es digito 
+            {
+                if (e.KeyChar != (char)Keys.Back)
+                    e.Handled = true;
+            }
+        }
+
+        private void txtZancadas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                if (e.KeyChar != (char)Keys.Back)
+                    e.Handled = true;
+            }
+        }
+
+        private void txtPasos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsDigit(e.KeyChar))
+            {
+                if (e.KeyChar != (char)Keys.Back)
+                    e.Handled = true;
+            }
+        }
+
     }
 }

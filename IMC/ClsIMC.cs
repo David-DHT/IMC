@@ -85,7 +85,7 @@ namespace IMC
             }
             else 
             {
-                return "Recorriste la distancia suficiente";
+                return "Haz recorrido la distancia suficiente";
             }
         }
 
