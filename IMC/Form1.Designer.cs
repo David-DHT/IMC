@@ -68,6 +68,7 @@
             this.txtPeso.Name = "txtPeso";
             this.txtPeso.Size = new System.Drawing.Size(188, 28);
             this.txtPeso.TabIndex = 2;
+            this.txtPeso.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPeso_KeyPress);
             // 
             // label3
             // 
@@ -86,6 +87,7 @@
             this.txtEstatura.Name = "txtEstatura";
             this.txtEstatura.Size = new System.Drawing.Size(188, 28);
             this.txtEstatura.TabIndex = 4;
+            this.txtEstatura.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtEstatura_KeyPress);
             // 
             // btnCalcular
             // 
@@ -115,6 +117,7 @@
             this.txtZancadas.Name = "txtZancadas";
             this.txtZancadas.Size = new System.Drawing.Size(77, 28);
             this.txtZancadas.TabIndex = 8;
+            this.txtZancadas.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtZancadas_KeyPress);
             // 
             // label5
             // 
@@ -133,6 +136,7 @@
             this.txtPasos.Name = "txtPasos";
             this.txtPasos.Size = new System.Drawing.Size(77, 28);
             this.txtPasos.TabIndex = 10;
+            this.txtPasos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPasos_KeyPress);
             // 
             // lblIMC
             // 
@@ -161,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
