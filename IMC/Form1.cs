@@ -21,16 +21,25 @@ namespace IMC
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Calculo.C_Estatura = float.Parse(txtEstatura.Text);
-            Calculo.C_peso = float.Parse(txtPeso.Text);
-            Calculo.C_zancada = float.Parse(txtZancadas.Text);
-            Calculo.C_Pasos = int.Parse(txtPasos.Text);
+            try
+            {
 
-            lblIMC.Text = "Tu IMC es de " + Calculo.CalcularIMC();
-            MessageBox.Show("Tu IMC es de " + Calculo.CalcularIMC());
-            var Estado = Calculo.Estado();
-            MessageBox.Show(Estado.Item1);
-            MessageBox.Show("La distancia recorrida fue de " + Calculo.CalcularDistancia()+"Km\n"+Calculo.C_Faltante(Estado.Item2));
+
+                Calculo.C_Estatura = float.Parse(txtEstatura.Text);
+                Calculo.C_peso = float.Parse(txtPeso.Text);
+                Calculo.C_zancada = float.Parse(txtZancadas.Text);
+                Calculo.C_Pasos = int.Parse(txtPasos.Text);
+
+                lblIMC.Text = "Tu IMC es de " + Calculo.CalcularIMC();
+                MessageBox.Show("Tu IMC es de " + Calculo.CalcularIMC());
+                var Estado = Calculo.Estado();
+                MessageBox.Show(Estado.Item1);
+                MessageBox.Show("La distancia recorrida fue de " + Calculo.CalcularDistancia() + "Km\n" + Calculo.C_Faltante(Estado.Item2)); 
+            }
+            catch
+            {
+                MessageBox.Show("Error, no puedes dejar espacios en blanco");
+            }
         }
 
         private void txtPeso_KeyPress(object sender, KeyPressEventArgs e)

@@ -76,17 +76,23 @@ namespace IMC
         }
         public string C_Faltante(float Faltante)
         {
+            if (Faltante==0) {
+                return "Tu IMC es bajo por lo que no es necesario que recorras una cierta distancia";
+            }
+            else
+            {
+                if (DistanciaR < Faltante){
+                    float total;
+                    total = Faltante - DistanciaR;
+                    return "La distancia que falta por recorrer es de " + total;
+                }
+                else
+                {
+                    return "Haz recorrido la distancia suficiente";
+                }
+            }
 
-            if (DistanciaR<Faltante)
-            {
-                float total;
-                total = Faltante - DistanciaR;
-                return "La distancia que falta por recorrer es de " + total;
-            }
-            else 
-            {
-                return "Haz recorrido la distancia suficiente";
-            }
+            
         }
 
     }
